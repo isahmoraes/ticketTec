@@ -1,0 +1,346 @@
+body{
+ background-color: lightsteelblue;
+ margin: 0;
+ scroll-behavior: smooth;
+}
+
+.menu{
+
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    width: 100vw;
+    border-bottom:  1px solid white;
+    background-color: rgb(202, 218, 240);
+    
+
+}
+.list{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+.list-menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.welcome{
+padding-left: 2rem;
+}
+.welcome {
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.507); /* Fundo branco com opacidade */
+    border-radius: 10px;
+    z-index: 2; /* Para garantir que o texto fique na frente */
+}
+
+.welcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/fundo.webp); /* Substitua pelo caminho da imagem */
+    background-size: cover; 
+    background-position: center;
+    opacity: 0.1; /* Transparência da imagem */
+    z-index: 1;
+    border-radius: 10px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    gap:2rem ;
+}
+#cards{
+    padding-left: 2rem ;
+    display: flex;
+    flex-wrap:initial; 
+    gap: 20px; 
+    justify-content: space-between; 
+    padding: 20px;
+}
+:root {
+    --card-background-color: #f8f9fa;
+    --text-color: #333;
+    --button-background: #007bff;
+    --button-color: #fff;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.button {
+    background-color: var(--button-background);
+    color: var(--button-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3; 
+}
+
+.card .view-button {
+    display: none; 
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.card:hover .view-button {
+    display: inline-block; 
+    opacity: 1;
+}
+h3{
+    padding-left:2rem
+}
+.filter-container {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dates {
+    display: flex;
+    text-align: center;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.date-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.date-selector button {
+    background-color: lightsteelblue;
+    color: white;
+    border: none;
+    padding: 25px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    min-width: 120px; 
+
+
+}
+
+.date-selector button:hover, #allEvents:hover {
+    background-color: #54789e;
+}
+
+.dates button {
+    background-color: lightsteelblue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+.dates button:hover {
+    background-color: #54789e;
+}
+#allEvents {
+    background-color: lightsteelblue;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 150px; 
+
+    text-wrap: nowrap;
+}
+.title_welcome{
+    color:#134880;
+}
+.events_title{
+    padding-left:2rem;
+    display:flex;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.subtitle{
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.chama{
+    
+    font-family: "Share Tech", sans-serif;
+}
+.Login{
+    padding-top: 6rem;
+
+    display: flex;
+    justify-content: center;
+}
+.login_input{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:15px;
+    input{
+        border-radius: 8px;
+        border:  1px solid grey;
+    }
+}
+.conteiner{
+    background-color: aliceblue;
+    padding: 46px;
+    border-radius: 8px;
+}
+.menu{
+    a{
+        text-decoration: none;
+        color:black;
+        cursor: pointer;
+    }
+}
+.sobre {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar efeito de card */
+    max-width: 900px; /* Largura máxima do card */
+    margin: 40px auto; /* Centraliza o card na tela */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+.sobre article {
+    font-family: "Share Tech", sans-serif;
+    font-size: 1.1rem; /* Tamanho de fonte */
+    color: #333; /* Cor do texto */
+    text-align: justify; /* Alinhamento do texto */
+}
+
+.sobre h2 {
+    font-size: 2rem; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do título */
+}
+.Home{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    align-items: end;
+    a{
+        font-family: "Share Tech", sans-serif;
+        text-decoration: none;
+        color: var(--text-color);
+        
+    }
+    button{
+        border-radius:20px ;
+        border: solid 1px gray;
+        padding: 10px;
+    }
+}
+/* Estilo para o slide lateral */
+.event-details-slide {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Inicia fora da tela */
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.event-details-content {
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.event-details-slide h3,
+.event-details-slide p {
+    margin: 10px 0;
+}
+
+/* Estilo para o botão de fechar */
+.close-btn {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}

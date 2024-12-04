@@ -1,0 +1,69 @@
+
+ [
+    {
+        "id": 1,
+        "data": "2024-11-25",
+        "horario": "09:00",
+        "nome": "Workshop Angular",
+        "descricao": "Aprenda sobre desenvolvimento de aplicações com Angular em um ambiente interativo.",
+        "valor": 150.00,
+        "local": "Centro de Convenções São Paulo"
+        
+    },
+    {
+        "id": 2,
+        "data": "2024-11-26",
+        "horario": "14:00",
+        "nome": "Palestra sobre IA e Machine Learning",
+        "descricao": "Exploração de casos de uso práticos de inteligência artificial no mercado atual.",
+        "valor": 200.00,
+        "local": "Auditório TechHub Rio de Janeiro",
+        "imagem":"./assets/DALL·E 2024-12-03 21.10.56 - A futuristic technology conference featuring a speaker on stage giving a talk about innovation. The setting includes holographic visuals projected abo.webp"
+    },
+    {
+        "id": 3,
+        "data": "2024-11-27",
+        "horario": "16:30",
+        "nome": "Workshop de Planejamento Estratégico em TI",
+        "descricao": "Imersão prática para definir estratégias eficazes em tecnologia da informação.",
+        "valor": 250.00,
+        "local": "Hotel Premium Brasília"
+    },
+    {
+        "id": 4,
+        "data": "2024-11-28",
+        "horario": "10:00",
+        "nome": "Treinamento de UI/UX",
+        "descricao": "Sessão prática sobre boas práticas de design para interfaces tecnológicas. ",
+        "valor": 180.00,
+        "local": "Espaço Criativo Curitiba"
+    },
+    {
+        "id": 5,
+        "data": "2024-11-29",
+        "horario": "18:00",
+        "nome": "Happy Hour Tech Networking",
+        "descricao": "Evento social para conhecer outros profissionais e trocar ideias sobre tecnologia.",
+        "valor": 120.00,
+        "local": "Rooftop Vista São Paulo",
+        "imagem": "./assets/DALL·E 2024-12-03 21.11.00 - A bustling networking area at a technology event, featuring people interacting and discussing innovations. The space includes digital panels, holograp.webp"
+    },
+    {
+        "id": 6,
+        "data": "2024-11-30",
+        "horario": "11:00",
+        "nome": "Feira de Startups Tecnológicas",
+        "descricao": "Apresentação de inovações tecnológicas de startups emergentes. ",
+        "valor": 100.00,
+        "local": "Expo Center Norte São Paulo"
+    },
+    {
+        "id": 7,
+        "data": "2024-12-01",
+        "horario": "08:30",
+        "nome": "Café com Líderes em Tecnologia",
+        "descricao": "Encontro informal com líderes do setor tecnológico. ",
+        "valor": 200.00,
+        "local": "Café CoWorking Porto Alegre"
+    }
+]
