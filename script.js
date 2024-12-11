@@ -1,19 +1,16 @@
-
-let eventos = []; 
-
+let eventos = [];
 
 async function events() {
     try {
         const response = await fetch('eventos.json');
-        eventos = await response.json(); 
-        
-     
+        eventos = await response.json();
+
         const cards = document.getElementById("cards");
         const cardModelo = document.querySelector('.card');
-        cardModelo.style.display = 'none'; 
-        
+        cardModelo.style.display = 'none';
+
         function displayEvents(events) {
-            cards.innerHTML = ''; 
+            cards.innerHTML = '';
             if (events.length === 0) {
                 cards.innerHTML = '<p>Nenhum evento encontrado para a data selecionada.</p>';
             } else {
@@ -24,43 +21,49 @@ async function events() {
                     card.querySelector('.local').textContent = `Local: ${evento.local}`;
                     card.querySelector('.descricao').textContent = `Descrição: ${evento.descricao}`;
                     card.querySelector('.valor').textContent = `Valor: R$ ${evento.valor.toFixed(2)}`;
+
+                    // Adicionando o ID do evento ao card
+                    card.setAttribute('data-id', evento.id);
+
+                    // Adicionando evento de clique para redirecionar
+                    card.addEventListener('click', function () {
+                        const eventId = this.getAttribute('data-id');
+                        window.location.href = `events.html?id=${eventId}`;
+                    });
+
                     cards.appendChild(card);
-                    card.style.display = 'block'; 
+                    card.style.display = 'block';
                 });
             }
         }
 
-      
         function populateDateSelector() {
             const uniqueDates = [...new Set(eventos.map(evento => evento.data))];
             const dateSelector = document.getElementById('dateSelector');
-            dateSelector.innerHTML = ''; 
-        
+            dateSelector.innerHTML = '';
+
             uniqueDates.forEach(date => {
                 const button = document.createElement('button');
-                
                 button.textContent = date;
                 button.setAttribute('data-date', date);
-                button.classList.add('btn', 'btn-secondary'); // Adicionando as mesmas classes aos botões de data
+                button.classList.add('btn', 'btn-secondary');
                 button.addEventListener('click', function () {
                     filterEventsByDate(date);
                 });
                 dateSelector.appendChild(button);
             });
-            
+
             const allEventsBtn = document.getElementById('allEvents');
-            allEventsBtn.classList.add('btn', 'btn-secondary'); // Garantir que o botão "Ver todos os eventos" tenha o mesmo estilo
+            allEventsBtn.classList.add('btn', 'btn-secondary');
             allEventsBtn.addEventListener('click', function () {
-                displayEvents(eventos); 
+                displayEvents(eventos);
             });
         }
-        
-   
+
         function filterEventsByDate(selectedDate) {
             const filteredEvents = eventos.filter(event => event.data === selectedDate);
             displayEvents(filteredEvents);
         }
-
 
         document.getElementById('dateSelector').addEventListener('change', function () {
             const selectedDate = this.value;
@@ -78,6 +81,5 @@ async function events() {
         console.error('Erro ao carregar eventos:', error);
     }
 }
-
 
 events();
